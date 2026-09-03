@@ -1,0 +1,37 @@
+name: ✅ 할 일
+description: 진행해야 할 작업을 등록합니다
+title: "[TODO]: "
+labels: ["todo"]
+body:
+  - type: textarea
+    id: content
+    attributes:
+      label: 작업 내용
+    validations:
+      required: true
+  - type: textarea
+    id: subtasks
+    attributes:
+      label: 세부 태스크
+      placeholder: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: false
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 우선순위
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: input
+    id: due
+    attributes:
+      label: 마감일
+      placeholder: YYYY-MM-DD
+    validations:
+      required: false
