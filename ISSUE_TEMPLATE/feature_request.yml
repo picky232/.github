@@ -1,0 +1,44 @@
+name: 🔍 리뷰
+description: 완료한 작업/학습에 대한 회고 및 리뷰
+title: "[REVIEW]: "
+labels: ["review"]
+body:
+  - type: input
+    id: target
+    attributes:
+      label: 리뷰 대상
+      placeholder: 무엇을 리뷰하나요?
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 카테고리
+      options:
+        - 프로젝트
+        - 학습
+        - 코드
+        - 기타
+    validations:
+      required: true
+  - type: textarea
+    id: good
+    attributes:
+      label: 잘된 점
+    validations:
+      required: false
+  - type: textarea
+    id: improve
+    attributes:
+      label: 아쉬운 점 / 개선할 점
+    validations:
+      required: false
+  - type: textarea
+    id: next
+    attributes:
+      label: 다음 액션
+      placeholder: |
+        - 
+        - 
+    validations:
+      required: false
